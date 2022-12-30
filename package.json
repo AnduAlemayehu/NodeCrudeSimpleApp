@@ -1,0 +1,24 @@
+{
+  "name": "nodecrudesimpleapp",
+  "version": "1.0.0",
+  "description": "simple crude NodeJs application",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnduAlemayehu/NodeCrudeSimpleApp.git"
+  },
+  "author": "Andu Alemayehu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AnduAlemayehu/NodeCrudeSimpleApp/issues"
+  },
+  "homepage": "https://github.com/AnduAlemayehu/NodeCrudeSimpleApp#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mysql": "^2.18.1"
+  }
+}
