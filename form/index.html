@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NodeJsCrude</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div style="height: 70%; margin-bottom: 10px;">
+        <div class="form-body">
+            <div class="row">
+                <div class="form-holder">
+                    <div class="form-content">
+                        <div class="form-items">
+                            <h3>Iphone information upload</h3>
+                            <p>Fill in the data below.</p>
+                            <form class="requires-validation" novalidate style="margin-right:10px"
+                                action="http://localhost:1234/addiphone" method="post">
+
+                                <div class="col-md-12">
+                                    <input class="form-control" type="text" name="product_name"
+                                        placeholder="product name" required>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <input class="form-control" type="text" name="product_url" placeholder="product Url"
+                                        required>
+                                </div>
+                                <div class="col-md-12">
+                                    <input class="form-control" type="text" name="product_descrpition"
+                                        placeholder="product descrpition" required>
+                                </div>
+                                <div class="col-md-12">
+                                    <br>
+                                    <textarea class="form-control" name="product_brief_descrpition"
+                                        placeholder="product brief descrpition" required></textarea>
+                                </div>
+                                <div class="col-md-12">
+                                    <input class="form-control" type="text" name="product_link"
+                                        placeholder="product link" required>
+                                </div>
+                                <div class="col-md-12">
+                                    <input class="form-control" type="text" name="starting_price"
+                                        placeholder="starting price" required>
+                                </div>
+                                <div class="col-md-12">
+                                    <input class="form-control" type="text" name="price_range" placeholder="price range"
+                                        required>
+                                </div>
+                                <br>
+                                <div class="col-md-12">
+                                    <label>Image Uploade</label>
+                                    <input class="form-control" type="file" name="product_image"
+                                        placeholder="product Image" required>
+                                </div>
+
+
+
+
+
+                                <div class="form-button mt-6" style="justify-content: right; text-align: right;">
+                                    <button id="submit" type="submit" class="btn btn-primary">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
