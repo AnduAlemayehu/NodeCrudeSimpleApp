@@ -146,9 +146,10 @@ serverApp.post("/addiphone", (req, res) => {
   con.query(
     `SELECT * FROM products WHERE product_name = "${product_name}"`,
     (err, rows, fields) => {
+      if (err) console.log(`Error Found: ${err}`);
       // Extracting Foreign key
 
-      let product_id = rows[0].product_id;
+      let product_id = rows[rows.length-1].product_id;
 
       let insertToDescription = `INSERT INTO productdescription (product_id,product_brief_description, product_description, product_img, product_link) VALUES ("${product_id}", "${product_brief_descrpition}","${product_descrpition}","${product_image}","${product_link}")`;
 
@@ -166,4 +167,19 @@ serverApp.post("/addiphone", (req, res) => {
   );
   res.end("Data inserted to tables");
   console.log("Data inserted to tables");
+});
+
+//for displayig all data
+
+serverApp.get("/display", (req, res) => {
+  con.query(
+    "SELECT * FROM products JOIN productdescription JOIN productprice ON products.product_id = productdescription.product_id AND products.product_id = productprice.product_id",
+    (err, rows, fields) => {
+      let iphones = { products: [] };
+      iphones.products = rows;
+      var stringIphones = JSON.stringify(iphones);
+      if (!err) res.end(stringIphones);
+      else console.log(err);
+    }
+  );
 });
